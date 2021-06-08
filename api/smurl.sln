@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "smurl.api", "smurl.api\smurl.api.csproj", "{CF3F5F2F-A251-423D-9683-4462B353524B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "smurl.domain", "smurl.domain\smurl.domain.csproj", "{52DB4C7E-A72B-462D-AFA1-E246EA08553E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "smurl.services", "smurl.services\smurl.services.csproj", "{ECC3E1AC-DEF2-4FCE-8092-E22D40CB2C61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "smurl.data", "smurl.data\smurl.data.csproj", "{CC250318-4B5C-495C-9227-C250A55B64C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF3F5F2F-A251-423D-9683-4462B353524B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF3F5F2F-A251-423D-9683-4462B353524B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF3F5F2F-A251-423D-9683-4462B353524B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF3F5F2F-A251-423D-9683-4462B353524B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52DB4C7E-A72B-462D-AFA1-E246EA08553E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52DB4C7E-A72B-462D-AFA1-E246EA08553E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52DB4C7E-A72B-462D-AFA1-E246EA08553E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52DB4C7E-A72B-462D-AFA1-E246EA08553E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECC3E1AC-DEF2-4FCE-8092-E22D40CB2C61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECC3E1AC-DEF2-4FCE-8092-E22D40CB2C61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECC3E1AC-DEF2-4FCE-8092-E22D40CB2C61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECC3E1AC-DEF2-4FCE-8092-E22D40CB2C61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC250318-4B5C-495C-9227-C250A55B64C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC250318-4B5C-495C-9227-C250A55B64C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC250318-4B5C-495C-9227-C250A55B64C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC250318-4B5C-495C-9227-C250A55B64C6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BA2C6AE4-8222-4086-9FDE-DCF1FFE34ACE}
+	EndGlobalSection
+EndGlobal

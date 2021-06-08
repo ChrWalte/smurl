@@ -1,0 +1,65 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Sql\Click\CreateClick.sql" />
+    <None Remove="Sql\Click\DeleteClick.sql" />
+    <None Remove="Sql\Click\GetClicks.sql" />
+    <None Remove="Sql\Click\UpdateClick.sql" />
+    <None Remove="Sql\Link\CreateLink.sql" />
+    <None Remove="Sql\Link\DeleteLink.sql" />
+    <None Remove="Sql\Link\GetLink.sql" />
+    <None Remove="Sql\Link\UpdateLink.sql" />
+    <None Remove="Sql\Tables\CreateClickTable.sql" />
+    <None Remove="Sql\Tables\CreateLinkTable.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Sql\Click\CreateClick.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sql\Click\DeleteClick.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sql\Click\GetClicks.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sql\Click\UpdateClick.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sql\Link\GetLink.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sql\Tables\CreateClickTable.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Sql\Link\CreateLink.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sql\Link\DeleteLink.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sql\Link\UpdateLink.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sql\Tables\CreateLinkTable.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.90" />
+    <PackageReference Include="Npgsql" Version="5.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\smurl.domain\smurl.domain.csproj" />
+  </ItemGroup>
+
+</Project>

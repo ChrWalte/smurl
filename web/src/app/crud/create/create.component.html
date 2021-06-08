@@ -1,0 +1,135 @@
+<div class="container create-container">
+  <div class="row create-group">
+    <h1><b>create smurl</b></h1>
+  </div>
+  <div class="row create-group">
+    <p>
+      Create a new smurl by giving a URL you would like to be shortened. You can
+      give it a custom slug or have one randomly generated. If the slug is
+      already taken, a message will appear telling you to select a different
+      one. If the smurl was created successfully, a message will appear giving
+      you your new smurl.
+    </p>
+  </div>
+
+  <div [hidden]="!isSlugParam">
+    The slug "{{ givenSlugParam }}" is not taken. Provide a url to create a new
+    smurl with the given slug.
+  </div>
+
+  <form [formGroup]="linkForm">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div class="row create-group">
+          <label for="url">Url<span class="required">*</span></label>
+          <input
+            id="url"
+            formControlName="url"
+            placeholder="https://smurl.xyz"
+          />
+          <span
+            class="required"
+            *ngIf="(url?.dirty || url?.touched) && url?.errors"
+            >Required
+          </span>
+        </div>
+        <div class="row create-group">
+          <label for="slug">Slug</label>
+          <input id="slug" placeholder="xyz" formControlName="slug" />
+          <span></span>
+        </div>
+        <div class="row create-group">
+          <div class="col-md-9">
+            <label
+              >Example smurl:
+              <a [routerLink]="['/', slug?.value || 'xyz']"
+                >https://smurl.xyz/{{ slug?.value || "xyz" }}</a
+              ></label
+            >
+          </div>
+          <div class="col-md-3">
+            <button
+              class="btn btn-sm float-right"
+              [disabled]="isUrlEmpty()"
+              (click)="createSmurl()"
+            >
+              Create smurl
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </form>
+</div>
+
+<ng-template #onError let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">smurl not created</h4>
+    <button
+      type="button"
+      class="close modal-close-button"
+      aria-label="Close"
+      (click)="modal.dismiss()"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        The smurl was not created. {{ failedResonse }}
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-dark"
+      ngbAutofocus
+      (click)="modal.close('Save click')"
+    >
+      Close
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #onCreate let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">smurl created</h4>
+    <button
+      type="button"
+      class="close modal-close-button"
+      aria-label="Close"
+      (click)="modal.dismiss()"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">The smurl was created successfully.</div>
+      <div class="form-group">https://smurl.xyz/{{ createdLink.slug }}</div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-sm"
+      ngxClipboard
+      [cbContent]="fullLink"
+      (click)="modal.close()"
+    >
+      Copy
+    </button>
+    <button
+      type="button"
+      class="btn btn-sm"
+      ngbAutofocus
+      (click)="modal.close()"
+    >
+      Close
+    </button>
+  </div>
+</ng-template>

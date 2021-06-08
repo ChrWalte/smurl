@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+$site-background: hsl(0, 0%, 16%, 100%);
+$site-forground: hsla(0, 0%, 78%, 100%);
+$site-highlight: hsla(205, 97%, 33%, 100%);
+$site-gold: hsla(56, 99%, 50%, 100%);
+$site-required: rgba(158, 0, 0%, 100%);
+
+html,
+body {
+  color: $site-forground !important;
+  background-color: $site-background !important;
+
+  a {
+    color: $site-highlight !important;
+    border: none !important;
+    outline: none !important;
+  }
+
+  input {
+    background-color: $site-background;
+    color: $site-forground;
+
+    padding: 5px;
+    width: 100%;
+  }
+
+  button {
+    background-color: $site-forground !important;
+    color: $site-background !important;
+  }
+}
+
+.site-modal .modal-content {
+  background-color: $site-background !important;
+  color: $site-forground !important;
+}
+
+.modal-close-button {
+  background-color: $site-background !important;
+  color: $site-forground !important;
+}
+
+.nav-active {
+  text-decoration: underline !important;
+}
+
+.required {
+  color: $site-required;
+}

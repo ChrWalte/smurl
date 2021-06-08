@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\smurl.data\smurl.data.csproj" />
+    <ProjectReference Include="..\smurl.domain\smurl.domain.csproj" />
+  </ItemGroup>
+
+</Project>
